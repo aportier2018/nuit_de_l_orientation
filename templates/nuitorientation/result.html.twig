@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultat de la rechercher{{ motcle }}{% endblock %}
+
+{# VERSION 0.0 {% block body %}
+    <main class="miseenforme afficheAccueilSansTitre">
+        <form class="formulaire">
+            <h4>Résultats de la recherche sur le mot-clé "<span>{{ motcle }}</span>"</h4>
+            {% for expo in exponents %}
+            <section>
+                <p>Nom de l'exposant : {{ expo.nameexp }}.</p>
+                <p>Son Secteur d'activité : {{ expo.activity }}.</p>
+                <p>
+                    <a href="{{ path('descriptifExpo', {id : expo.id}) }}" class="btn btn-success">Plus d'info</a>
+                </p>
+            </section>
+            {% endfor %}
+        </form>
+        <a href="{{ path('search') }}" class="btn btn-warning">Nouvelle Recherche</a>
+    </main>
+
+{% endblock %} #}
+
+{# Version 0.1 #}
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ path('home')}}">Accueil</a></li>
+        <li class="breadcrumb-item"><a href="{{ path('search')}}">Recherche par mot-clé</a></li>
+        <li class="breadcrumb-item">Résultats de la recherche</li>        
+    </ol>
+
+    <main class="miseenforme afficheAccueilSansTitre">
+        <div class="card table-responsive mt-5 px-2 text-center">
+            <div class="card-header">Liste des exposants</div>
+            <table class="table table-bordered">
+                <thead class="">
+                    <tr>
+                        <th class="text-center" colspan="4" > mot-clé : <span>{{ motcle }}</span></th>
+                    </tr>
+                    <tr>
+                        <th class="text-center ">Nom de l'exposant</th>
+                        <th class="text-center ">Secteur d'activité</th>
+                        <th class="text-center "></th>
+                        <th class="text-center "></th
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for expo in exponents %}
+                        <tr>
+                            <td class="text-center">{{ expo.nameexp }}</td>
+                            <td class="text-center">{{ expo.activity }}</td>
+                            <td class="text-center col-1">
+                                <a href="{{ path('descriptifExpo', {id : expo.id}) }}" class="btn btn-info">Plus d'info</a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="#" class="btn btn-success">Enregistrer</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-3">
+            <a href="{{ path('search') }}" class="btn btn-warning">Nouvelle Recherche</a>
+        </p>
+    </main>
+    
+{% endblock %}

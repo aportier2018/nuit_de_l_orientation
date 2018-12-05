@@ -1,0 +1,38 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Admin - Liste des utilisateurs{% endblock %}
+
+{% block body %}
+    <div class="container admin">
+        <h4 class="my-3 text-center">Gestion des utilisateurs</h4>
+        <table class="table table-hover" id="user_list">
+            <thead>
+                <tr>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Nom</th>
+                    <th class="text-center">Prénom</th>
+                    <th class="text-center">E-mail</th>
+                    <th class="text-center">Role</th>
+                    <th class="text-center">! Suppression définitive !</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td class="text-center">{{ user.id }}</td>
+                        <td class="text-center">{{ user.name }}</td>
+                        <td class="text-center">{{ user.firstname }}</td>
+                        <td class="text-center">{{ user.email }}</td>
+                        <th class="text-center">{{ user.userRoles.current.title }}</th>
+                        </td>
+                        <td class="text-center">
+                            <a href="{{ path('user_delete', {'id': user.id}) }}" class="btn btn-danger">
+                            <i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}

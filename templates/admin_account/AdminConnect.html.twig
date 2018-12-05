@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Connexion à l'administration</title>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+            
+        <style>
+        body{
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            height: 100vh;
+            }
+        
+        .card{
+            margin-top:10%;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="col-md-6">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class="card-title text-center">
+                        <i class="fas fa-lock"></i>
+                        Connexion à l'administration du site
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form  method="post">
+                        <div class="form-group">
+                            <label for="_username">Email</label>
+                            <input type="text" class="form-control" placeholder="email@example.fr" name="_username">
+                        </div>
+                        <div class="form-group">
+                            <label for="_password">Mot de passe</label>
+                            <input type="password" class="form-control" placeholder="mot de passe" name="_password">
+                        </div>
+                        <div class="form-group">
+                            <a href="{{ path('security_login') }}" class="btn btn-link"><i class="fas fa-arrow-circle-left"></i>
+                            Retour au site
+                            </a>
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fas fa-lock-open"></i>
+                                Connexion
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

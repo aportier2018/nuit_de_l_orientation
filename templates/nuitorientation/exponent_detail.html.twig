@@ -1,0 +1,16 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Descriptif de l'exposant sélectionné{% endblock %}
+
+{% block body %}
+
+<main class="admin">
+    {% for expo in exponents %}
+        <section class="">
+            <h4>Fiche de {{ expo.nameexp }}</h4>
+            <p class="secteurActivite">Secteur d'activité : {{ expo.activity }}<p>
+            <a href="{{ path('result') }}" class="btn btn-warning">Revenir aux résultats</a>
+        </section>
+    {% endfor %}
+</main>
+{% endblock %}

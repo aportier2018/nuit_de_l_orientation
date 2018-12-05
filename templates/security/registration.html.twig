@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% form_theme form_inscription 'bootstrap_4_layout.html.twig' %}
+{% block title %}Inscription{% endblock %}
+{% block body %}
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ path('home')}}">Accueil</a></li>
+        <li class="breadcrumb-item active">Inscription</li>
+    </ol>
+    
+    <main class="miseenforme afficheAccueilSansTitre">
+
+        {{ form_start(form_inscription) }}
+            <legend id="titre">Inscription</legend>
+            <hr/>
+                {{ form_row(form_inscription.name, {'label' : "Votre nom", 'attr' : {'placeholder' : "Nom"}} ) }}
+                {{ form_row(form_inscription.firstname, {'label' : "Votre prénom", 'attr' : {'placeholder' : "prénom"}} ) }}
+                {{ form_row(form_inscription.email, {'label' : "Votre adresse mail", 'attr' : {'placeholder' : "email"}} ) }}
+                {{ form_row(form_inscription.password, {'label' : "Mot de passe", 'attr' : {'placeholder' : "mot de passe"}} ) }}
+                {{ form_row(form_inscription.confirm_password, {'label' : "Confirmation", 'attr' : {'placeholder' : "réécrire votre mot de passe"}} ) }}
+                <a href="{{ path('search') }}">
+                    <button type="submit" class="btn btn-primary mb-4">S'inscrire</button>
+                </a>
+            <p>
+                <a href="{{ path('security_login') }}"><span>Déjà inscrit ? C'est par ici !</span></a>
+            </p>
+        {{ form_end(form_inscription) }}
+        <p>
+        <a href="#titre" class="far fa-arrow-alt-circle-up mb-2 "> Haut</a>
+        </p>
+    </main>
+{% endblock %}

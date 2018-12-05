@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+{% form_theme formProfile 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Modification du profil{% endblock %}
+
+{% block body %}
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('home') }}">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="{{ path('user_compte', {id : app.user.id}) }}">Mon compte</a></li>
+            <li class="breadcrumb-item">Mon profil</li>
+        </ol>
+
+    <div class="miseenforme afficheAccueilSansTitre">
+        <div class="card border-primary  my-auto mb-3" style="max-width: 60rem;">
+            <div class="card-header">Modifier mon profil</div>
+            <div class="card-body">
+
+                {{ form_start(formProfile) }}
+                    {{ form_row(formProfile.name, {'label' : "Votre nom"}) }}
+                    {{ form_row(formProfile.firstname, {'label' : "Votre prénom"}) }}
+                    {{ form_row(formProfile.email, {'label' : "Votre email"}) }}
+
+                    <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+
+                {{ form_end(formProfile) }}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

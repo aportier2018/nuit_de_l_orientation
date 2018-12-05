@@ -1,0 +1,40 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Admin - Liste des exposants{% endblock %}
+
+{% block body %}
+    <div class="container admin exponent">
+        <h4 class="mt-3 text-center">Gestion des exposants</h4>
+        <p class="mb-2 text-center"><a href="{{ path('exponent_add') }}" class="btn btn-success">Ajouter un exposant</a></p>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Nom</th>
+                    <th class="text-center">Secteur d'activité</th>
+                    <th class="text-center">Mot-clé</th>
+                    <th class="text-center">Modification</th>
+                    <th class="text-center">Suppresion définitive</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for expo in exponents %}
+                    <tr>
+                        <td class="text-center">{{ expo.id }}</td>
+                        <td class="text-center">{{ expo.nameexp }}</td>
+                        <td class="text-center">{{ expo.activity }}</td>
+                        <td class="text-center">{{ expo.getMotcle.namemc }}</td>
+                        <td class="text-center">
+                            <a href="{{ path('exponent_edit', {'id': expo.id}) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                        </td>
+                        <td class="text-center">    
+                            <a href="{{ path('exponent_delete', {'id': expo.id}) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+{% endblock %}

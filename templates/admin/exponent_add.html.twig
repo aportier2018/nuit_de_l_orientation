@@ -1,0 +1,37 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% form_theme exponent_form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Admin - ajouter ou modifier un exposant{% endblock %}
+
+{% block body %}
+    <main class="container admin exponent" style="max-width: 60rem;">
+        <h4 class="my-3 text-center">
+            {% if editMode %}
+            Modifier un exposant
+            {% else %}
+            Ajouter un exposant
+            {% endif %}
+        </h4>
+        {{ form_start(exponent_form) }}
+
+            {{ form_row(exponent_form.nameexp, {'label' : "Nom", 'attr' : {'placeholder' : "Nom"}} ) }}
+            {{ form_row(exponent_form.activity, {'label' : "Secteur d'activité", 'attr' : {'placeholder' : "Secteur d'activité"}} ) }}
+
+            {{ form_widget(exponent_form) }}
+
+            <button type="submit" class="btn btn-success">
+                {% if editMode %}
+                Enregistrer les modifications
+                {% else %}
+                Ajouter l'exposant
+                {% endif %}
+            </button>
+
+            <a href="{{ path('exponent_list') }}" class="btn btn-danger">Retour à la liste des exposants</a>
+
+        {{ form_end(exponent_form) }}
+    </main>
+
+
+{% endblock %}

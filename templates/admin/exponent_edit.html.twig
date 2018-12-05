@@ -1,0 +1,16 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Admin - Fiche détaillée de "{{ expo.nameexp }}":{% endblock %}
+
+{% block body %}
+
+<main class="admin">
+    <section>
+        <h4>Modifier un exposant</h4>
+        <p>Nom de l'exposant :{{ expo.nameexp }}</p>
+        <p class="secteurActivite">Secteur d'activité : {{ expo.activity }}<p>
+        <a href="{{ path('result') }}" class="btn btn-warning">Retour à la liste des exposants </a>
+    </section>
+
+</main>
+{% endblock %}

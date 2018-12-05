@@ -1,0 +1,32 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% form_theme mc_form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Admin - Ajout un mot-clé{% endblock %}
+
+{% block body %}
+    <main class="admin">
+        
+        {{ form_start(mc_form) }}
+            <h4 class="my-3 text-center">
+            {% if editMode %}
+            Modifier le mot-clé
+            {% else %}
+            Ajouter un mot-clé
+            {% endif %}
+        </h4>
+            {{ form_row(mc_form.namemc, {'label' : " ", 'attr' : {'placeholder' : "Mot clé" }} ) }}
+                
+            <button type="submit" class="btn btn-success">
+                {% if editMode %}
+                Enregistrer les modifications
+                {% else %}
+                Ajouter le mot-clé
+                {% endif %}
+            </button>
+
+            <a href="{{ path('mc_list') }}" class="btn btn-danger">Retour à la liste des mots-clés</a>
+
+        {{ form_end(mc_form) }}
+    </main>
+{% endblock %}

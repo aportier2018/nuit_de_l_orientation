@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}page de {{ user.name }} {{ user.firstname }}{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ path('home') }}">Accueil</a></li>
+        <li class="breadcrumb-item">Mon Compte</li>
+    </ol>
+    <main class="miseenforme afficheAccueilSansTitre">
+        <div class="card border-primary my-auto my-auto mb-3" style="max-width: 40rem;">
+            <div class="card-header">{{ user.name }} {{ user.firstname }}</div>
+            <div class="card-body">
+                Mes Archives
+            </div>
+            <a href="{{ path('search') }}" class="btn btn-warning">Nouvelle Recherche</a>
+        </div>
+    </main>
+
+
+{% endblock %}

@@ -1,0 +1,225 @@
+html{
+
+}
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Les affiches en fond */
+
+.affiche20191200x,
+.afficheAccueilVierge,
+.afficheAccueilSansTitre{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+.afficheAccueilVierge
+{
+    background-image: url("/img/affiche_NO_vierge.png");
+}
+
+.afficheAccueilSansTitre{
+    /* background-image: url("/img/affiche_NO_vierge_sans_titre.jpg"); */
+    background-image: url("/img/affiche_NO_vierge_sans_titre353kb.jpg");
+}
+
+.affiche20191200x{
+    background-image: url("/img/affiche20191200x.jpg");
+}
+
+/*---------------------------------------------*/
+
+/*animation accessite */
+.flash{
+    font-size : 0.8rem;
+}
+
+/*-----------------------------------------------*/
+ header i{
+     width:30px;
+ }
+
+.messageflash{
+    position:absolute;
+    min-width:100vw;
+}
+
+h1{
+    font-size:1.1rem;
+    text-align: center;
+    color:#fff;
+}
+
+h4{
+    font-size:1.2rem;
+    color:rgb(255, 255, 255);
+}
+
+ h4 span{
+     color: #cf0;
+ }
+
+ .exponent h4{
+     color:rgb(0, 0, 0);
+ }
+
+.miseenforme,
+.add,
+.admin
+{
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    flex: 1;
+    align-items: center;
+}
+ 
+.miseenforme {
+     color: rgb(26, 22, 22);
+     text-align: center;
+     border-radius: 5px;
+     box-shadow: 0px 0 10px 5px #271753;
+    }
+
+    
+.miseenforme section,
+{
+    border:1px solid rgb(21, 140, 186);
+    border-radius: 5px;
+    margin-bottom:1%;
+}
+
+.admin{
+    flex-wrap: wrap;
+    text-align: center;
+    color: #343a40;
+}
+
+.admin h4{
+        color: #343a40;
+    }
+
+.admin section{
+        min-width: 250px;
+        margin-top:1%;
+        border:1px solid #158CBA;
+    }
+    
+.admin .btn-warning{
+        margin-top:15%;
+    }
+
+
+.add label{
+        margin-left:3rem;
+    }
+
+#exponent_motcle{
+        margin:auto;
+    }
+
+    /* --------------------------------------------*/
+
+    /* Les card*/
+.card-sm {
+	background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border:1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+}
+
+.card-header{
+    background-color: #fff;
+    color :#0c0000;
+}
+
+.card-title{
+    color:#0c0000; 
+}
+/* --------------------------------------------*/
+
+    /* Les taleaux */
+.table{
+        border-radius: 5px;
+    }
+
+.table td,
+.table th{
+    padding:10px;
+}
+/* --------------------------------------------*/
+
+/* Les formulaires */
+form{
+    min-width: 35%;
+    margin: 1% auto;
+    border: 1px solid #fff;
+    border-radius : 5px;
+    background-color: rgba(255,255,255);
+}
+
+.form-control {
+    width:90%;
+    margin:0 auto 5%;
+    font-size:1rem;
+    color:rgb(69, 130, 236)
+}
+/* --------------------------------------------*/
+/* les barres de navigation*/
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0px;
+	border-top: 3px solid rgba(0,0,0,0.25);
+}
+
+span{
+    color:#17a2b8;
+    font-weight: 800;
+    font-family : Roboto, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+span:hover{
+    font-style:italic;
+}
+
+.navadmin .navbar-dark .navbar-nav .show > .nav-link{
+    color: #f80909;
+}
+
+.navadmin #accountDropdownLink {
+	background-color: #0078fe00;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+/* Breadcrumb*/
+.breadcrumb{
+    margin-bottom:0rem;
+}
+
+.btn-archive{
+	width: 21%;
+	padding: 10px;
+	color: #fff;
+	font-size: 1.6rem;
+    font-weight: bold;
+    border: 1px solid #ff570a;
+    background-color: #f0ad4e;
+    border-radius: 10px;
+}
+
+.messageflash{
+    position:relative;
+}
