@@ -11,13 +11,33 @@ body{
 
 /* Les affiches en fond */
 
-.affiche20191200x,
-.afficheAccueilVierge,
-.afficheAccueilSansTitre{
+.affiche20191200x{
+    background-image: url("/img/affiche20191200x.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:cover;
+    /* background-attachment: fixed; */
+    background-size: contain;
+    background-color: #a0a2c933;
+    background-position: center;
 }
+
+@media screen and (max-width: 800px) {
+  .affiche20191200x
+  {
+    background-image: url("/img/affiche20191200x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+}
+
+.afficheAccueilVierge,
+.afficheAccueilSansTitre
+{
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-size: cover;
+
+}
+
 
 .afficheAccueilVierge
 {
@@ -28,16 +48,16 @@ body{
     /* background-image: url("/img/affiche_NO_vierge_sans_titre.jpg"); */
     background-image: url("/img/affiche_NO_vierge_sans_titre353kb.jpg");
 }
-
-.affiche20191200x{
-    background-image: url("/img/affiche20191200x.jpg");
-}
-
 /*---------------------------------------------*/
 
 /*animation accessite */
 .flash{
     font-size : 0.8rem;
+}
+
+.flash.animated.slow {
+	-webkit-animation-duration: 0s;
+	animation-duration: 4s;
 }
 
 /*-----------------------------------------------*/
