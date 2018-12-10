@@ -60,6 +60,11 @@ class User implements UserInterface
      */
     private $userRoles;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Exponent", inversedBy="users")
+     */
+    private $archive;
+
     public function __construct()
     {
         $this->userRoles = new ArrayCollection();
@@ -67,6 +72,7 @@ class User implements UserInterface
         $role = new Role();
         $role->setTitle("ROLE_USER");
         $this->addUserRole($role);
+        $this->archive = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -164,6 +170,32 @@ class User implements UserInterface
         if ($this->userRoles->contains($userRole)) {
             $this->userRoles->removeElement($userRole);
             $userRole->removeUser($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Exponent[]
+     */
+    public function getArchive(): Collection
+    {
+        return $this->archive;
+    }
+
+    public function addArchive(Exponent $archive): self
+    {
+        if (!$this->archive->contains($archive)) {
+            $this->archive[] = $archive;
+        }
+
+        return $this;
+    }
+
+    public function removeArchive(Exponent $archive): self
+    {
+        if ($this->archive->contains($archive)) {
+            $this->archive->removeElement($archive);
         }
 
         return $this;

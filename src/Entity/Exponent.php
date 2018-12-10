@@ -40,6 +40,11 @@ class Exponent
      */
     private $mc;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\User", mappedBy="archive")
+     */
+    private $users;
+
     // /**
     //  * @ORM\ManyToOne(targetEntity="App\Entity\Motcle", inversedBy="exponents")
     //  * @ORM\JoinColumn(nullable=false)
@@ -51,6 +56,7 @@ class Exponent
     public function __construct()
     {
         $this->motcle = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -89,6 +95,34 @@ class Exponent
     public function setMotcle(?Motcle $mc): self
     {
         $this->mc = $mc;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->addArchive($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->contains($user)) {
+            $this->users->removeElement($user);
+            $user->removeArchive($this);
+        }
 
         return $this;
     }
