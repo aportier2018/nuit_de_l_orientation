@@ -10,7 +10,7 @@
     
     <main class="miseenforme afficheAccueilSansTitre">
 
-        {{ form_start(form_inscription) }}
+        {{ form_start(form_inscription, {'attr' : {'class' : "mt-5" }} ) }}
             <legend id="titre">Inscription</legend>
             <hr/>
                 {{ form_row(form_inscription.name, {'label' : "Votre nom", 'attr' : {'placeholder' : "Nom"}} ) }}

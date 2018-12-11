@@ -1,6 +1,6 @@
-/* html{
-    font-size:62.5%;
-} */
+html{
+    font-size:80%;
+}
 
 body{
     display: flex;
@@ -204,6 +204,7 @@ h4{
 .card-header{
     background-color: #fff;
     color :#0c0000;
+    font-size:1.3rem;
 }
 
 .card-title{
@@ -225,7 +226,8 @@ h4{
 /* Les formulaires */
 form{
     min-width: 35%;
-    margin: 1% auto;
+    margin: auto;
+    padding:1rem;
     border: 1px solid #fff;
     border-radius : 5px;
     background-color: rgba(255,255,255);
@@ -277,7 +279,6 @@ span:hover{
 }
 
 .btn-archive{
-	width: 21%;
 	padding: 10px;
 	color: #fff;
 	font-size: 1.6rem;
