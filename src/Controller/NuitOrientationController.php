@@ -29,26 +29,15 @@ class NuitOrientationController extends AbstractController
     
     /** PARTIE UTILISATEUR **/
     
-    // /**
-    //  * 
-    //  * @Route("/", name="enreg")
-    //  */
-    // public function enregistrement()
-    // {
-    //     return $this->render('nuitorientation/record.html.twig', [
-    //         'controller_name' => 'NuitOrientationController',
-    //     ]);
-    // }
-
-    /**
+     /**
      * 
      * route pour aller sur la page d'accueil
      * 
-     * @Route("/home", name="ddd")
+     * @Route("/", name="home")
      */
     public function home()
     {
-        return $this->render('nuitorientation/record.html.twig', [
+        return $this->render('nuitorientation/accueil.html.twig', [
             'controller_name' => 'NuitOrientationController',
         ]);
     }
@@ -299,5 +288,15 @@ class NuitOrientationController extends AbstractController
         return $this->RedirectToRoute('mc_list');
     }
 
+     /**
+     * 
+     * @Route("/record", name="record")
+     */
+    public function enregistrement()
+    {
+        return $this->render('nuitorientation/record.html.twig', [
+            'controller_name' => 'NuitOrientationController',
+        ]);
+    }
 }
 
