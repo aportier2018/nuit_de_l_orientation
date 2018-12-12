@@ -6,9 +6,12 @@
 
 <main class="admin">
     {% for expo in exponents %}
-        <section class="">
+        <section>
             <h4>Fiche de {{ expo.nameexp }}</h4>
-            <p class="secteurActivite">Secteur d'activité : {{ expo.activity }}<p>
+            <p >Secteur d'activité : {{ expo.activity }}<p>
+            <p >Adresse : {{ expo.adresse }}<p>
+            <p >Email : {{ expo.email }}<p>
+            <p >Site Internet : {{ expo.site }}<p>
             <a href="{{ path('result') }}" class="btn btn-warning">Revenir aux résultats</a>
         </section>
     {% endfor %}

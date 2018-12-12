@@ -13,9 +13,12 @@
                     <th class="text-center">Id</th>
                     <th class="text-center">Nom</th>
                     <th class="text-center">Secteur d'activité</th>
+                    <th class="text-center">Adresse</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Site</th>
                     <th class="text-center">Mot-clé</th>
                     <th class="text-center">Modification</th>
-                    <th class="text-center">Suppresion définitive</th>
+                    <th class="text-center">Suppresion définitive<s/th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +27,9 @@
                         <td class="text-center">{{ expo.id }}</td>
                         <td class="text-center">{{ expo.nameexp }}</td>
                         <td class="text-center">{{ expo.activity }}</td>
+                        <td class="text-center">{{ expo.adresse }}</td>
+                        <td class="text-center">{{ expo.email }}</td>
+                        <td class="text-center">{{ expo.site }}</td>
                         <td class="text-center">{{ expo.getMotcle.namemc }}</td>
                         <td class="text-center">
                             <a href="{{ path('exponent_edit', {'id': expo.id}) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
