@@ -22,9 +22,9 @@ body{
         top: 37%;
         left: 77%;
         width: 22%;
-        font-size: x-small;
         font-family: inherit;
-        font-size:0.8rem;
+        font-size:1rem;
+        color :#fff;
         }
 }
 
@@ -40,14 +40,14 @@ body{
     .accueil p
     {
 	position: absolute;
-    top: 41%;
-    left: 57%;
-    width: 6%;
+    top: 38%;
+    left: 59%;
+    width: 7%;
     z-index: 10;
     margin-bottom:0;
     font-family: inherit;
-    font-size:0.7rem;
-    z-index:10;
+    font-size:1.15rem;
+    color:#fff;
     }
 }
 
@@ -99,7 +99,7 @@ body{
 .pulse {
   -webkit-animation-name: pulse;
   animation-name: pulse;
-  color :#1df909;
+  color:#fff;
 }
 
 /*-----------------------------------------------*/
