@@ -9,7 +9,7 @@ body{
 @media screen and (max-width: 800px){
     .affiche20191200x
         {
-        background-image: url("http://nuit-orientation.simplon-charleville.fr/public/img/affiche20191200x.jpg");
+        background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche20191200x.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #a0a2c933;
@@ -19,11 +19,11 @@ body{
     .accueil p
         {
         position: absolute;
-        top: 37%;
-        left: 77%;
-        width: 22%;
+        top: 36%;
+        left: 77.5%;
+        width: 23%;
         font-family: inherit;
-        font-size:1rem;
+        font-size:0.9rem;
         color:#fff;
         }
 }
@@ -31,7 +31,7 @@ body{
 @media screen and (min-width: 800px) {
   .affiche20191200x
   {
-    background-image: url("http://nuit-orientation.simplon-charleville.fr/public/img/affiche20191200x.jpg");
+    background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche20191200x.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -60,12 +60,12 @@ body{
 
 .afficheAccueilVierge
 {
-    background-image: url("http://nuit-orientation.simplon-charleville.fr/public/img/affiche_NO_vierge.png");
+    background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche_NO_vierge.png");
 }
 
 .afficheAccueilSansTitre{
     /* background-image: url("/img/affiche_NO_vierge_sans_titre.jpg"); */
-    background-image: url("http://nuit-orientation.simplon-charleville.fr/public/img/affiche_NO_vierge_sans_titre353kb.jpg");
+    background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche_NO_vierge_sans_titre353kb.jpg");
 }
 /*---------------------------------------------*/
 
