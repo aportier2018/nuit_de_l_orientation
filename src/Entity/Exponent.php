@@ -40,6 +40,21 @@ class Exponent
      */
     private $mc;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $site;
+
     // /**
     //  * @ORM\ManyToOne(targetEntity="App\Entity\Motcle", inversedBy="exponents")
     //  * @ORM\JoinColumn(nullable=false)
@@ -89,6 +104,42 @@ class Exponent
     public function setMotcle(?Motcle $mc): self
     {
         $this->mc = $mc;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getSite(): ?string
+    {
+        return $this->site;
+    }
+
+    public function setSite(string $site): self
+    {
+        $this->site = $site;
 
         return $this;
     }

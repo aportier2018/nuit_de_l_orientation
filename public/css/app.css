@@ -1,40 +1,105 @@
 
 body{
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 /* Les affiches en fond */
+@media screen and (max-width: 800px){
+    .affiche20191200x
+        {
+        background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche20191200x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #a0a2c933;
+        background-position: center;
+        }
 
-.affiche20191200x,
-.afficheAccueilVierge,
-.afficheAccueilSansTitre{
+    .accueil p
+        {
+        position: absolute;
+        top: 36%;
+        left: 77.5%;
+        width: 23%;
+        font-family: inherit;
+        font-size:0.9rem;
+        color:#fff;
+        }
+}
+
+@media screen and (min-width: 800px) {
+  .affiche20191200x
+  {
+    background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche20191200x.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:cover;
+    background-size: contain;
+    background-position: center;
+    }
+
+    .accueil p
+    {
+	position: absolute;
+    top: 38%;
+    left: 59%;
+    width: 7%;
+    z-index: 10;
+    margin-bottom:0;
+    font-family: inherit;
+    font-size:1.15rem;
+    color:#fff;
+    }
+}
+
+.afficheAccueilVierge,
+.afficheAccueilSansTitre
+{
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .afficheAccueilVierge
 {
-    background-image: url("/img/affiche_NO_vierge.png");
+    background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche_NO_vierge.png");
 }
 
 .afficheAccueilSansTitre{
     /* background-image: url("/img/affiche_NO_vierge_sans_titre.jpg"); */
-    background-image: url("/img/affiche_NO_vierge_sans_titre353kb.jpg");
+    background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche_NO_vierge_sans_titre353kb.jpg");
 }
-
-.affiche20191200x{
-    background-image: url("/img/affiche20191200x.jpg");
-}
-
 /*---------------------------------------------*/
 
 /*animation accessite */
 .flash{
     font-size : 0.8rem;
+}
+
+.flash.animated.slow {
+	-webkit-animation-duration: 0s;
+	animation-duration: 4s;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  color:#fff;
 }
 
 /*-----------------------------------------------*/
@@ -55,7 +120,7 @@ h1{
 
 h4{
     font-size:1.2rem;
-    color:rgb(255, 255, 255);
+    color:rgb(216, 14, 14);
 }
 
  h4 span{
@@ -66,6 +131,7 @@ h4{
      color:rgb(0, 0, 0);
  }
 
+.accueil,
 .miseenforme,
 .add,
 .admin
@@ -77,6 +143,7 @@ h4{
     align-items: center;
 }
  
+.accueil,
 .miseenforme {
      color: rgb(26, 22, 22);
      text-align: center;
@@ -84,7 +151,7 @@ h4{
      box-shadow: 0px 0 10px 5px #271753;
     }
 
-    
+.accueil, 
 .miseenforme section,
 {
     border:1px solid rgb(21, 140, 186);
@@ -134,6 +201,7 @@ h4{
 .card-header{
     background-color: #fff;
     color :#0c0000;
+    font-size:1.3rem;
 }
 
 .card-title{
@@ -155,7 +223,8 @@ h4{
 /* Les formulaires */
 form{
     min-width: 35%;
-    margin: 1% auto;
+    margin: auto;
+    padding:1rem;
     border: 1px solid #fff;
     border-radius : 5px;
     background-color: rgba(255,255,255);
@@ -197,8 +266,8 @@ span:hover{
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-	padding-right: 1.5rem;
-	padding-left: 1.5rem;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
 }
 
 /* Breadcrumb*/
@@ -207,7 +276,6 @@ span:hover{
 }
 
 .btn-archive{
-	width: 21%;
 	padding: 10px;
 	color: #fff;
 	font-size: 1.6rem;
@@ -219,4 +287,8 @@ span:hover{
 
 .messageflash{
     position:relative;
+}
+
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
+	height: calc(1.9rem + 2px);
 }

@@ -16,6 +16,9 @@ class ExponentType extends AbstractType
         $builder
             ->add('nameexp')
             ->add('activity')
+            ->add('adresse')
+            ->add('email')
+            ->add('site')
             ->add('motcle', EntityType::class,[
                 'class'=> Motcle::class,
                 'choice_label' => 'namemc',

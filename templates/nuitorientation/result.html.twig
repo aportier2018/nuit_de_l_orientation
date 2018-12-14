@@ -30,7 +30,7 @@
     </ol>
 
     <main class="miseenforme afficheAccueilSansTitre">
-        <div class="card table-responsive mt-5 px-2 text-center">
+        <div class="card  mt-5 mx-2 px-2 text-center">
             <div class="card-header">Liste des exposants</div>
             <table class="table table-bordered">
                 <thead class="">
@@ -41,7 +41,6 @@
                         <th class="text-center ">Nom de l'exposant</th>
                         <th class="text-center ">Secteur d'activité</th>
                         <th class="text-center "></th>
-                        <th class="text-center "></th
                     </tr>
                 </thead>
                 <tbody>
@@ -50,10 +49,7 @@
                             <td class="text-center">{{ expo.nameexp }}</td>
                             <td class="text-center">{{ expo.activity }}</td>
                             <td class="text-center col-1">
-                                <a href="{{ path('descriptifExpo', {id : expo.id}) }}" class="btn btn-info">Plus d'info</a>
-                            </td>
-                            <td class="text-center col-1">
-                                <a href="#" class="btn btn-success">Enregistrer</a>
+                                <a href="{{ path('descriptifExpo', {id : expo.id}) }}" class="btn btn-info">Détail et enregistrement</a>
                             </td>
                         </tr>
                     {% endfor %}
