@@ -3,6 +3,15 @@
 {% block title %}Archives{% endblock %}
 
 {% block body %}
-    <h4>Désolé ! Dans cette version du site, les archives ne sont pas encore accessibles.</h4>
-    <p><a href="{{ path('result') }}" class="btn btn-info ml-3">Retour aux résultats</a></p>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ path('home') }}">Accueil</a></li>
+        <li class="breadcrumb-item"><a href="{{ path('search') }}">Recherche par mot-clé</a></li>
+        <li class="breadcrumb-item">Archives</li>
+    </ol>
+    <div class="record">
+        <h4>Désolé ! Dans cette version du site, les archives ne sont pas encore accessibles.</h4>
+        <p>
+            <a href="{{ path('search') }}" class="btn btn-warning ml-3">Retour à la page de recherche</a>
+        </p>
+    </div>
 {% endblock %}
