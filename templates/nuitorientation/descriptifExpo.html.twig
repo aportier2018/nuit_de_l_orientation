@@ -36,10 +36,10 @@
             </table>
         </div>
         <p class="mt-3">
-        <a href="#" class="btn btn-success ml-2">Enregistrer l'exposant</a>
+        <a href="{{ path('record') }}" class="btn btn-success ml-2 mb-3">Enregistrer l'exposant</a>
         <a href="{{ path('return', {'id' : exponents.id}) }}" class="btn btn-info ml-3">Retour aux résultats</a>
         </p>
-        <p><a href="#" class="btn btn-danger">La carte</a></p>
+        <p><a href="#" class="btn btn-secondary" disabled>La carte (inactif)</a></p>
     </main>
     
 {% endblock %}
