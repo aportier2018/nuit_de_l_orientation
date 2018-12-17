@@ -3,6 +3,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(180DEG, #1e223b,#33265c,#3a517d 65%, #fff 98%);
 }
 
 /* Les affiches en fond */
@@ -41,8 +42,8 @@ body{
     {
 	position: absolute;
     top: 66%;
-    left: 33%;
-    width: 8%;
+    left: calc(50% - 241px);
+    width: 20ch;
     z-index: 10;
     margin-bottom:0;
     font-family: inherit;
@@ -99,7 +100,11 @@ body{
 }
 
 .accueil
-{position: relative;
+{
+    position: relative;
+    background: linear-gradient(180DEG, )
+
+
 }
 
 /*---------------------------------------------*/
