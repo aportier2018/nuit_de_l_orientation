@@ -41,8 +41,8 @@ body{
     .accueil p
     {
 	position: absolute;
-    top: 66%;
-    left: calc(50% - 241px);
+    top: 65%;
+    left: calc(50% - 185px);
     width: 20ch;
     z-index: 10;
     margin-bottom:0;
@@ -91,7 +91,6 @@ body{
      
     }
 
-
 .miseenforme section,
 {
     border:1px solid rgb(21, 140, 186);
@@ -102,11 +101,11 @@ body{
 .accueil
 {
     position: relative;
-    background: linear-gradient(180DEG, )
-
-
 }
 
+.admin{
+    background: #fff;
+}
 /*---------------------------------------------*/
 
 /*animation accessite */

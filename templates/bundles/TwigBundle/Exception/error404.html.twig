@@ -3,9 +3,10 @@
 
 {% block body %}
     <div class="erreur container">
-        <h4 style="color:red;">Erreur 404</h4>
-        <p>Désolé, cette page n'existe pas</p>
-
+        <div class="alert alert-danger">
+            <h2 style="color:red;">Erreur 404</h2>
+            <p>Désolé, cette page n'existe pas</p>
+        </div>
         <a href="{{ path('home') }}" class="btn btn-primary">Retour à l'accueil</a>
     </div>
 {% endblock %}
