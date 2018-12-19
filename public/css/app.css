@@ -42,7 +42,7 @@ body{
     {
 	position: absolute;
     top: 65%;
-    left: calc(50% - 200px);
+    left: calc(50% - 250px);
     width: 20ch;
     z-index: 10;
     margin-bottom:0;
