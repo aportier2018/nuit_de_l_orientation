@@ -3,6 +3,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(180DEG, #1e223b,#33265c,#3a517d 65%, #fff 98%);
 }
 
 /* Les affiches en fond */
@@ -19,11 +20,11 @@ body{
     .accueil p
         {
         position: absolute;
-        top: 36%;
-        left: 77.5%;
+        top: 65%;
+        left: 8.5%;
         width: 23%;
         font-family: inherit;
-        font-size:0.9rem;
+        font-size:0.7rem;
         color:#fff;
         }
 }
@@ -40,13 +41,13 @@ body{
     .accueil p
     {
 	position: absolute;
-    top: 38%;
-    left: 59%;
-    width: 7%;
+    top: 65%;
+    left: calc(50% - 185px);
+    width: 20ch;
     z-index: 10;
     margin-bottom:0;
     font-family: inherit;
-    font-size:1.15rem;
+    font-size:1rem;
     color:#fff;
     }
 }
@@ -67,18 +68,47 @@ body{
     /* background-image: url("/img/affiche_NO_vierge_sans_titre.jpg"); */
     background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche_NO_vierge_sans_titre353kb.jpg");
 }
+
+.accueil,
+.miseenforme,
+.add,
+.admin
+{
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    flex: 1;
+    align-items: center;
+}
+ 
+
+.miseenforme {
+     color: rgb(26, 22, 22);
+     text-align: center;
+     border-radius: 5px;
+     box-shadow: 0px 0 10px 5px #271753;
+     padding: 2rem 0;
+     
+    }
+
+.miseenforme section,
+{
+    border:1px solid rgb(21, 140, 186);
+    border-radius: 5px;
+    margin-bottom:1%;
+}
+
+.accueil
+{
+    position: relative;
+}
+
+.admin{
+    background: #fff;
+}
 /*---------------------------------------------*/
 
 /*animation accessite */
-.flash{
-    font-size : 0.8rem;
-}
-
-.flash.animated.slow {
-	-webkit-animation-duration: 0s;
-	animation-duration: 4s;
-}
-
 @keyframes pulse {
   from {
     -webkit-transform: scale3d(1, 1, 1);
@@ -131,33 +161,6 @@ h4{
      color:rgb(0, 0, 0);
  }
 
-.accueil,
-.miseenforme,
-.add,
-.admin
-{
-    height: 100%;
-    display: flex;
-    flex-direction:column;
-    flex: 1;
-    align-items: center;
-}
- 
-.accueil,
-.miseenforme {
-     color: rgb(26, 22, 22);
-     text-align: center;
-     border-radius: 5px;
-     box-shadow: 0px 0 10px 5px #271753;
-    }
-
-.accueil, 
-.miseenforme section,
-{
-    border:1px solid rgb(21, 140, 186);
-    border-radius: 5px;
-    margin-bottom:1%;
-}
 
 .admin{
     flex-wrap: wrap;
@@ -275,14 +278,31 @@ span:hover{
     margin-bottom:0rem;
 }
 
+
+/* page archive */
+
+.record{
+    text-align: center;
+    margin:auto;
+}
+
+.record p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
 .btn-archive{
 	padding: 10px;
 	color: #fff;
-	font-size: 1.6rem;
-    font-weight: bold;
-    border: 1px solid #ff570a;
+	font-size: 1rem;
     background-color: #f0ad4e;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+
+a.btn-archive:hover{
+    background-color: #fff;
+    color: #f0ad4e;
+    text-decoration:none;
 }
 
 .messageflash{
@@ -291,4 +311,15 @@ span:hover{
 
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
 	height: calc(1.9rem + 2px);
+}
+
+
+/*  PAGE ERREUR 403 et 404 */
+
+.erreur{
+    margin:auto;
+}
+
+.erreur p{
+    color:#fff;
 }
