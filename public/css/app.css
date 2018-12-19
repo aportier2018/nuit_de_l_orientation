@@ -42,7 +42,7 @@ body{
     {
 	position: absolute;
     top: 65%;
-    left: calc(50% - 185px);
+    left: calc(50% - 200px);
     width: 20ch;
     z-index: 10;
     margin-bottom:0;
@@ -57,11 +57,6 @@ body{
 {
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-.afficheAccueilVierge
-{
-    background-image: url("http://nuit-orientation.simplon-charleville.fr/img/affiche_NO_vierge.png");
 }
 
 .afficheAccueilSansTitre{
