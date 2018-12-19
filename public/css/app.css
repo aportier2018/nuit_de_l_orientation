@@ -10,7 +10,7 @@ body{
 @media screen and (max-width: 800px){
     .affiche2019
         {
-        background-image: url("../img/affiche20192bis.jpg");
+        background-image: url("../public/img/affiche20192bis.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #a0a2c933;
@@ -32,7 +32,7 @@ body{
 @media screen and (min-width: 800px) {
   .affiche2019
   {
-    background-image: url("../img/affiche20192bis.jpg");
+    background-image: url("../public/img/affiche20192bis.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -61,7 +61,7 @@ body{
 
 .afficheAccueilSansTitre{
     /* background-image: url("/img/affiche_NO_vierge_sans_titre.jpg"); */
-    background-image: url("../img/affiche_NO_vierge_sans_titre353kb.jpg");
+    background-image: url("../public/img/affiche_NO_vierge_sans_titre353kb.jpg");
 }
 
 .accueil,
