@@ -21,7 +21,7 @@ body{
         {
         position: absolute;
         top: 65%;
-        left: calc(50% - 200px);
+        left: calc(50% - 250px);
         width: 20ch;
         font-family: inherit;
         font-size:0.7rem;
