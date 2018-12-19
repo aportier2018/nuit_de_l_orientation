@@ -21,8 +21,8 @@ body{
         {
         position: absolute;
         top: 65%;
-        left: 8.5%;
-        width: 23%;
+        left: calc(50% - 200px);
+        width: 20ch;
         font-family: inherit;
         font-size:0.7rem;
         color:#fff;
